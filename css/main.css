@@ -238,6 +238,13 @@ footer {
 /* ==========================================================================
    Print styles
    ========================================================================== */
+@media screen and (min-width: 1em) {
+    .site-content > .content-wrapper {
+        max-height: 1030px;
+    }
+}
+
+
 @media screen and (min-width: 35.5em) {
     .site-content > .content-wrapper {
         max-height: 1030px;
