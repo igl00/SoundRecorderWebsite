@@ -1,28 +1,3 @@
-$(function () {
-	function fullScreen() {
-		var windowHeight = $(window).height();
-		var fullScreenSections = document.querySelectorAll("section.fullscreen");
-
-		for (var i = 0; i < fullScreenSections.length; i++) {
-			fullScreenSections[i].style.height = windowHeight + "px";
-		}
-		
-		$('.content-resizer').each(function () {
-			var contentHeight = $(this).height();
-			$(this).css('top', (windowHeight / 2) - (contentHeight / 2));
-		});
-	}	
-	fullScreen();
-	$(window).bind("resize", function () {
-		fullScreen();
-	});
-
-	// jQuery-One-Page-Nav
-	$('header').onePageNav({
-		currentClass: 'pure-menu-active'
-	});
-});
-
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,8 +10,8 @@ ga('send', 'pageview');
 // Doorbell.io
 window.doorbellOptions = {
     appKey: 'julf16JqaLTaHombXbfarLxdaRTKsxhbnWVGTbWcFo72FdF1vt05Z3r2g154Ll6R',
-    hideButton: true,
-    container: document.getElementById('feedback-container'),
+    // hideButton: true,
+    // container: document.getElementById('feedback-container'),
 };
 (function(w, d, t) {
     var hasLoaded = false;

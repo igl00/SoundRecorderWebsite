@@ -32,93 +32,60 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="main-container">
+        <header class="product-branding">
+            <div class="content-wrapper">
+                <img src="img/logo_bnw_100.png" class="product-logo">
+                <span class="product-name"> Sound Recorder </span>
+            </div>
+        </header>
 
-            <section class="header container fullscreen" id="home">
-                <div class="content-resizer">
-                    <h2 class="small-caps">Sound Recorder</h2>
-                    
-                    <canvas id="specgen" width="440" height="40"></canvas>
-                </div>
-                <div class="scroll-down-div" onclick="$('#features-nav-btn').trigger('click')"><i class="fa fa-angle-down"></i></div>
-            </section>
-
-            <header class="pure-menu pure-menu-horizontal nav">
-                <div class="product-branding">
-                    <img src="img/logo_bnw_100.png" class="product-logo">
-                    <span class="product-name"> Sound Recorder </span>
-                </div>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#home" class="pure-menu-link">Home</a>
-                    </li>
-                    <li class="pure-menu-item"><a href="#features" class="pure-menu-link" id="features-nav-btn">Features</a>
-                    </li>
-                    <li class="pure-menu-item"><a href="#download" class="pure-menu-link">Download</a>
-                    </li>
-                    <li class="pure-menu-item"><a href="#support" class="pure-menu-link">Support</a>
-                    </li>
-                </ul>
-            </header>
-
-            <section class="container" id="features">
-                <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-2" style="position: relative; min-width: 100px;">
-                        <div class="text-container" style="float: right; max-width: 500px; text-align: left; padding-left: 20px; padding-right: 50px;">
+        <div class="site-content">
+            <div class="content-wrapper pure-g">
+                <div class="pure-u-1 pure-u-xl-1-2" style="position: relative;">
+                    <div class="container" style="float: left; text-align: left; width: 100%;">
+                        <div style="max-width: 530px; margin: auto; padding-left: 20px; padding-right: 50px;">
                             <h3>Easy to use</h3>
 
                             <p>Sound Recorder was designed to make recording as easy as possible.
-                            It strips away the complicated features of more advanced recordering programs 
+                            It strips away the complicated features of more advanced recordering programs
                             and gives you what you're really after - a simple recording program.
                             </p>
+
+                            <div style="margin-top: 30px;">
+                                <form class="download-form" method="get" action="files/SoundRecorder.msi">
+                                    <button type="submit" class="button" id="download-button" style="background:#FE5F55 !important;"><i class="fa fa-windows" aria-hidden="true" style="padding-right: 8px;"></i>Download Beta</button>
+                                </form>
+                                <form class="download-form" action="https://github.com/johnnyedwards/SoundRecorder">
+                                    <button type="submit" class="button" id="source-button" ><i class="fa fa-github" aria-hidden="true" style="padding-right: 8px;"></i>View Source</button>
+                                </form>
+                            </div>
+                            <div style="max-width:600px;margin:0 auto; margin-top:20px;">
+                                <p style="font-size:0.9em; color: gray;"><i>Available for windows vista, 7, 8, 8.1, and 10.</i>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-2">
-                        <div class="screenshot-container pure-img" style="float: left;">
+                </div>
+                <div class="pure-u-1 pure-u-xl-1-2" style="position: relative;">
+                    <div class="container" style="margin: auto; width:100%; float: left; padding-top: 20px;">
+                        <div style="margin: auto; width: 527px; padding-right: 50px;">
                             <img src="img/screenshot.png" id="screenshot">
                             <img src="img/visualization.gif" id="screenshot-visualization">
                             <div id="screenshot-levels">
                                 <img src="img/levels.gif">
-                            </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section class="fullscreen" id="download">
-                <div class="content-resizer">
-                    
-                    <h2 style="font-family:'Century Gothic', sans-serif;">try it now</h2>
-                    <div style="margin-top: 40px;">
-                        <form class="download-form" method="get" action="files/SoundRecorder.msi">
-                            <button type="submit" class="button" id="download-button" style="background:#FE5F55 !important;"><i class="fa fa-windows" aria-hidden="true" style="padding-right: 8px;"></i>Download Beta</button>
-                        </form>
-                        <form class="download-form" action="https://github.com/johnnyedwards/SoundRecorder">
-                            <button type="submit" class="button" id="source-button" ><i class="fa fa-github" aria-hidden="true" style="padding-right: 8px;"></i>View Source</button>
-                        </form>
-                    <div>
-                    <div style="max-width:600px;margin:0 auto; margin-top:20px;">
-                        <p style="font-size:0.9em; color: gray;"><i>Available for windows vista and later</i>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="fullscreen" id="support">
-                <div class="content-resizer">
-                    <div id="feedback-container"></div>
-                    <!-- <p>FAQ</p>  -->
-                </div>
-                <footer>
-                    
-                </footer>
-            </section>
-
-        </div> <!-- #main-container -->
+        <footer>
+ 
+        </footer>
 
         <script type="application/javascript" src="js/vendor/jquery-3.1.1.min.js"></script>
         <script type="application/javascript" src="js/vendor/jquery.nav.js"></script>
-        <script type="application/javascript" src="js/vendor/unslider-min.js"></script>
         <script type="application/javascript" src="js/main.js"></script>
-        <script type="application/javascript" src="js/specgen.js"></script>
     </body>
 </html>

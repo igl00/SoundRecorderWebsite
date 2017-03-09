@@ -6,18 +6,6 @@ spectrum.init();
 
 render();
 
-// start();
-
-// function start() {
-// 	// canvas.style.background = "hsl(0, 0%, 90%)";
-// 	var fps = 60;
-// 	var spectrum = new Spectrum(canvas.getContext('2d'));
-
-// 	spectrum.init();
-
-// 	// setInterval(function() {draw(spectrum);}, 1000 / fps);
-// }
-
 function render() {
 	spectrum.update();
 	spectrum.draw();
@@ -38,10 +26,10 @@ function Spectrum(ctx) {
 		for (var i = 0; i < canvas.width; i++) {
 			this.update();
 		}
-		for (var i = 0; i < canvas.width; i++) {
-			lines[i].x = i;
+		for (var j = 0; j < canvas.width; j++) {
+			lines[j].x = j;
 		}
-	}
+	};
 
 	this.update = function() {
 		if (lines.length >= canvas.width) {
@@ -50,7 +38,7 @@ function Spectrum(ctx) {
 
 		line_height = generator.run();
 		lines.push(new Line(ctx, canvas.width, canvas.height / 2 - line_height / 2, canvas.height / 2 - line_height / 2 + line_height))
-	}
+	};
 
 	this.draw = function() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,7 +61,7 @@ function Line(ctx, i_x, i_y_0, i_y_1) {
 
 	this.update = function (n_x, n_color) {
 		this.x -= 1;
-	}
+	};
 
 	this.draw = function() {
 		ctx.moveTo(this.x, this.y_0);
